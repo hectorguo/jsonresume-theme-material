@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{#resume.basics}}{{name}}－{{label}}{{/resume.basics}}</title>
+  {{#resume.basics}}<meta name="author" content="{{name}}">{{/resume.basics}}
+  <style>
+  {{{css}}}
+  </style>
+
+</head>
+
+<body>
+  <main id="resume">
+    {{#resume.basics}}
+    <header class="inside">
+      <h1 id="name">{{name}}</h1>
+      {{#if label}}<h2 class="current-position">{{label}}</h2>{{/if}}
+      <ul class="subContact">
+        {{#location}}
+          {{#if city}}<li class="location"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" class="style-scope iron-icon"></path></g></svg></span> {{city}}</li>{{/if}}
+        {{/location}}
+        {{#if website}}
+        <li class="website"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" class="style-scope iron-icon"></path></g></svg></span><a href="http://{{website}}"> {{website}}</a></li>{{/if}}
+        {{#if email}}
+        <li class="email"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" class="style-scope iron-icon"></path></g></svg></span><a href="mailto:{{email}}"> {{email}}</a></li>{{/if}}
+        {{#if phone}}
+        <li class="phone"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" class="style-scope iron-icon"></path></g></svg></span> {{phone}}</li>{{/if}}
+      </ul>
+    </header>
+    {{/resume.basics}}
+    <article id="main">
+      <div class="inside">
+        {{#resume.basics}}
+        {{#if summary}}
+        <section class="resume-section subAbout">
+          <section class="sectionLeft">
+            <h2 id="about-title" class="resumeSection">自我简介</h2>
+          </section>
+          <section class="sectionRight">
+            <p class="about-me">{{{summary}}}</p>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}} 
+        {{/resume.basics}} 
+        {{#if resume.work.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">工作经历</h2>
+          </section>
+          <section class="sectionRight">
+            <div class="list">
+              <ul>
+                {{#each resume.work}}
+                <li class="experience">
+                  {{#if company}}
+                  <h3 class="title">{{company}}{{#if position}} – {{position}}{{/if}}</h3>{{/if}} 
+                  <h3 class="time">{{#if startDate}}{{startDate}}{{/if}} – {{#if endDate}}{{endDate}}{{else}}Present{{/if}}</h3> 
+                  {{#if summary}}
+                  <div class="description">
+                    <p>{{{summary}}}</p>
+                  </div>
+                  {{/if}} 
+<!--                   {{#if highlights.length}}
+                  <ul class="highlights">
+                    {{#each highlights}}
+                    <li>{{.}}</li>
+                    {{/each}}
+                  </ul>
+                  {{/if}} -->
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.projects.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">所做项目</h2>
+          </section>
+          <section class="sectionRight">
+            <div class="list">
+              <ul>
+                {{#each resume.projects}}
+                <li class="projects">
+                  {{#if name}}
+                  <h3 class="title">
+                  {{name}}
+                    {{#if url}}
+                    <a href="{{url}}"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" class="style-scope iron-icon"></path></g></svg></span> Link</a>
+                    {{/if}}
+                  </h3>
+                  {{/if}} 
+                  
+                  <h3 class="time">{{#if startDate}}{{startDate}}{{/if}} – {{#if endDate}}{{endDate}}{{else}}Present{{/if}}</h3> 
+                  {{#if summary}}
+                  <div class="description">
+                    <p>{{{summary}}}</p>
+                  </div>
+                  {{/if}} 
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.education.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">教育背景</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="education" class="list">
+              <ul id="educations">
+                {{#each resume.education}}
+                <li class="education">
+                  {{#if institution}}<h3 class="title">{{institution}}</h3>{{/if}}
+                  {{#if studyType}}<h3 class="subtitle">{{studyType}}</h3>{{/if}}
+                  <h3 class="time">{{#if startDate}}{{startDate}}{{/if}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}}</h3>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.awards.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">荣誉奖项</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="awards" class="list">
+              <ul id="awards">
+                {{#each resume.awards}}
+                <li class="award">
+                {{#if title}}
+                  <h3 class="title">{{title}}</h3>
+                {{/if}}
+                {{#if awarder}}
+                  <h3 class="subtitle">{{awarder}}</h3>
+                {{/if}}
+                {{#if date}}
+                  <h3 class="time">{{date}}</h3>
+                {{/if}}
+                {{#if summary}}
+                  <div class="description">
+                    <p>{{{summary}}}</p>
+                  </div>
+                {{/if}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.publications.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">出版作品</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="publications" class="list">
+              <ul id="publications">
+                {{#each resume.publications}}
+                <li class="award">
+                {{#if name}}
+                  <h3 class="title">
+                  {{name}}
+                    {{#if website}}
+                    <a href="{{website}}"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" class="style-scope iron-icon"></path></g></svg></span> Link</a>
+                    {{/if}}
+                  </h3>
+                {{/if}}
+                {{#if publisher}}
+                  <h3 class="subtitle">{{publisher}}</h3>
+                {{/if}}
+                {{#if releaseDate}}
+                  <h3 class="time">{{releaseDate}}</h3>
+                {{/if}}
+                {{#if summary}}
+                  <div class="description">
+                    <p>{{{summary}}}</p>
+                  </div>
+                {{/if}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.skills.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">擅长技能</h2>
+          </section>
+          <section class="sectionRight" id="skills">
+            {{#each resume.skills}}
+            <div class="skills">
+              {{#if name}}
+              <h3 class="title">{{name}}</h3>
+              {{/if}}
+              {{#if keywords.length}}
+              <ul>
+                {{#each keywords}}
+                <li>{{.}}</li>
+                {{/each}}
+              </ul>
+              {{/if}}
+            </div>
+            {{/each}}
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.languages.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">语言能力</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="languages" class="list">
+              <ul id="languages">
+                {{#each resume.languages}}
+                <li class="lang">
+                {{#if language}}
+                  <h3 class="title">{{language}}</h3>
+                {{/if}}
+                {{#if fluency}}
+                  <div class="description">
+                    <p>{{fluency}}</p>
+                  </div>
+                {{/if}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+
+        {{#if resume.interests.length}}
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">兴趣方向</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="interests" class="list">
+              <ul id="interests">
+                {{#each resume.interests}}
+                <li class="interest">
+                  {{#if name}}
+                  <h3 class="title">{{name}}</h3>
+                  {{/if}}
+                  {{#if keywords.length}}
+                  <div class="description">
+                      <p>{{#each keywords}}{{.}}  {{/each}}</p>
+                    </div>
+                  {{/if}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        {{/if}}
+      </div>
+    </article>
+  </main>
+  <footer>
+  {{#resume.basics}}
+    {{#if profiles.length}}
+    <div class="profiles">
+      {{#each profiles}}
+      <a href="{{url}}">{{network}}</a>
+      {{/each}}
+    </div>
+    {{/if}}
+  {{/resume.basics}}
+    <p id="copyright">Powered by <a href="https://github.com/jsonresume/resume-cli">resume-cli</a>, theme designed by <a href="https://github.com/hectorguo/jsonresume-theme-material">Hector Guo - jsonresume-theme-material</a></p>
+  </footer>
+</body>
+</html>

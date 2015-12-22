@@ -1,0 +1,98 @@
+{
+  "basics": {
+    "name": "XXX",
+    "label": "软件工程师",
+    "picture": "",
+    "email": "xxx@xxx.com",
+    "phone": "00011112222",
+    "website": "hectorguo.com",
+    "summary": "关注前端开发及人机交互方向",
+    "location": {
+      "city": "深圳"
+    },
+    "profiles": [{
+      "network": "Github",
+      "username": "hectorguo",
+      "url": "https://github.com/hectorguo"
+    },{
+      "network": "Linkedin",
+      "username": "hectorguo",
+      "url": "https://www.linkedin.com/in/hectorguo"
+    },{
+      "network": "打印PDF",
+      "username": "hectorguo",
+      "url": "javascript:window.print();"
+    }]
+  },
+  "work": [{
+    "company": "自由职业",
+    "position": "Web开发",
+    "website": "",
+    "startDate": "2012-07",
+    "endDate": "至今",
+    "summary": "独立开发者，主攻移动端Web App，使用Web Components、Polymer、Cordova开发过跨平台<a href=\"http://hectorguo.com/en/ios-app-random/\">移动APP</a>，使用HTML5，Web Socket，NodeJS开发过<a href=\"http://hectorguo.com/en/iphone-game-controler/\">手机体感控制器</a>，使用Bootstrap、jQuery开发过Web APP，熟悉常用打包工具（gulp, bower, npm）及Shell脚本，也用Hammer Editor做过<a href=\"http://hectorguo.com/en/l4d2/\">游戏地图和Mod</a>，各项目详情可见<a href=\"http://hectorguo.com/zh/projects/\">个人主页</a>"
+  }],
+  "volunteer": [],
+  "projects": [{
+    "name": "个人项目",
+    "url": "http://hectorguo.com/zh/projects/",
+    "startDate": "2012-06",
+    "endDate": "至今",
+    "summary": "以下为个人独立开发项目，详情可参见<a href=\"http://hectorguo.com/zh/projects/\">个人项目主页</a>：<br>－ <a href=\"http://hectorguo.com/en/ios-app-random/\">移动APP：分歧终结机（Polymer, Cordova）</a><br>－ <a href=\"http://hectorguo.com/en/ios-app-filltime/\">iOS APP：FillTime（Swift, Unity2D, 开发中）</a><br>－ <a href=\"http://hectorguo.com/en/l4d2/\">游戏Mod：求生之路2之工大校园（Hammer Editor）</a><br>－ <a href=\"http://hectorguo.com/GRE-Flashcard/\">Web App：GRE单词本（Bootstrap, jQuery）</a><br>－ <a href=\"https://github.com/hectorguo/CKEditor-Markdown-Plugin\">Markdown编辑器（CKEditor集成）</a><br>－ <a href=\"https://github.com/moxiecode/plupload\">文件上传（mOxie, plupload）</a><br>－ <a href=\"https://github.com/hectorguo/QRmap\">公交导航二维码（百度地图, jQuery Mobile）</a><br>－ <a href=\"https://chrome.google.com/webstore/detail/%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E5%88%92%E8%AF%8D%E6%90%9C%E7%B4%A2/femcbbmhkcbbmbfmokdopgpfolbamini\">豆瓣电影划词搜索（Chrome插件）</a><br>－ <a href=\"http://hectorguo.com/en/mapbox-starter/\">可视化：美国Top大学分布（Mapbox, GeoJSON）</a>"
+  }],
+  "education": [{
+    "institution": "哈尔滨工业大学",
+    "studyType": "学士学位",
+    "startDate": "2008-08",
+    "endDate": "2012-07"
+  }],
+  "awards": [{
+    "title": "XXX奖",
+    "date": "2015-01",
+    "awarder": "XXX组织"
+  }],
+  "skills": [{
+    "name": "语言类",
+    "level": "",
+    "keywords": [
+      "Javascript（ES6）",
+      "HTML（HTML5）",
+      "CSS",
+      "SASS",
+      "NodeJS",
+      "Python",
+      "Java",
+      "Shell",
+      "PHP"
+    ]
+  }, {
+    "name": "框架类",
+    "level": "",
+    "keywords": [
+      "React",
+      "Vue",
+      "jQuery",
+      "Polymer",
+      "AngularJS",
+      "Socket.io",
+      "Webpack",
+      "Jekyll"
+    ]
+  }, {
+    "name": "技能类",
+    "level": "Master",
+    "keywords": [
+      "敏捷开发",
+      "游戏Mod制作"
+    ]
+  }],
+  "languages": [{
+    "language": "英语",
+    "fluency": "流畅"
+  }],
+  "interests": [{
+    "name": "前端开发，Web设计，人机交互",
+    "keywords": []
+  }],
+  "references": []
+}

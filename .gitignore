@@ -1,0 +1,6 @@
+node_modules/
+npm-debug.log
+resume.html
+index.html
+resume.pdf
+.DS_Store
