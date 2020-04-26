@@ -4,7 +4,7 @@ This is the material theme for [JSON Resume](http://jsonresume.org/).
 
 Added `projects` tag，responsive design.
 
-![](http://ww2.sinaimg.cn/large/6d0af205jw1ez8gjtzslsj20tu0hb0vn.jpg)
+![demo](https://user-images.githubusercontent.com/1996426/80295515-12ad2480-8728-11ea-8d54-27f9bccf1353.png)
 
 ## Getting started
 
